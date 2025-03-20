@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('#search-bar').on('keyup', function() {
+        var searchValue = $(this).val().toLowerCase();
+        $('#student-table tbody tr').filter(function() {
+            $(this).toggle($(this).text().toLowerCase().indexOf(searchValue) > -1);
+        });
+    });
+
+    $('.edit-button').on('click', function() {
+        var row = $(this).closest('tr');
+        var name = row.find('td:nth-child(1)').text();
+        var age = row.find('td:nth-child(2)').text();
+        var semester = row.find('td:nth-child(3)').text();
+        var registrationNumber = row.find('td:nth-child(4)').text();
+
+    });
+});
+    </script>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#student-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#student-table th, #student-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#student-table th {
+    background-color: #f0f0f0;
+}
+
+#student-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#student-table tr:hover {
+    background-color: #ccc;
+    transition: background-color 0.5s ease;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Student Information</h1>
+        <input type="text" id="search-bar" placeholder="Search by name...">
+        <table id="student-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Semester</th>
+                    <th>Registration Number</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>20</td>
+                    <td>5</td>
+                    <td>12345</td>
+                    <td>
+                        <button class="btn btn-primary edit-button">Edit</button>
+                        <button class="btn btn-danger delete-button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jane Doe</td>
+                    <td>22</td>
+                    <td>6</td>
+                    <td>67890</td>
+                    <td>
+                        <button class="btn btn-primary edit-button">Edit</button>
+                        <button class="btn btn-danger delete-button">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Bob Smith</td>
+                    <td>21</td>
+                    <td>4</td>
+                    <td>34567</td>
+                    <td>
+                        <button class="btn btn-primary edit-button">Edit</button>
+                        <button class="btn btn-danger delete-button">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

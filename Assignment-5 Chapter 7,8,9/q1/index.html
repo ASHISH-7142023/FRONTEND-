@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+           
+             $("h3").click(function(){
+                var a = $("#password").val();
+                var b=a;
+                if(a==b.toLowerCase() || a==b.toUpperCase()){ 
+                    console.log("false");
+                    $(".button").hide();
+                    
+                }
+                else{
+                    console.log("true"); 
+                    $("#login-page form").append("<div id=\"button-div\"><input style=\"margin-top: 15px;\" type=\"submit\" value=\"Login\" class=\"button\"></div>")  
+                }
+                 
+             })
+        })
+    </script>
+</head>
+<style>
+    *:not(h1,hr,body,
+    #main,h3){
+        border-radius: 7px;
+        padding: 4px;
+    }
+    body,html{
+        height: 100%;
+        width: 100%;
+    }
+    #login-page{
+        margin-left: auto;
+        margin-right: auto;
+        border: 3px solid black;
+        height: 550px;
+        width: 500px;
+        background-color: wheat;
+    }
+</style>
+<body>
+    <div id="main">
+        <h1 style="text-align: center;">SCHOOL</h1>
+        <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel dolor repellendus quae voluptate dicta officiis, blanditiis quo odit voluptas nam excepturi maxime libero distinctio. Vel aliquid autem nostrum officia?</p>
+        <hr>
+        <div id="login-page">
+               <form action="/q2,q3,q4,q5/index.html" target="_blank">
+                   <h3>Username</h3>
+                   <input type="text" id="txt">
+                   <h3>Password</h3>
+                   <input type="password" id="password" class="pass"><br>
+                  
+               </form>
+        </div>
+        
+    </div>
+</body>
+</html>

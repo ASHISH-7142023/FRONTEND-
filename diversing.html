@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversing</title>
+    <style>
+        .one *{
+            border: 3px solid darkcyan;
+            color: blue;
+            display: block;
+            margin: 20px;
+            padding: 6px;
+        }
+    </style>
+    <script>
+        $(document).ready(function()){
+            $("span").parent().css({"color":"red" "border":"5px solid :blue"})
+
+        }
+    </script>
+</head>
+<body>
+    <div class="one">
+        <div style="width: 500px;">div great grandparent
+            <ol>ol grandparent
+                <li> p parent
+                    <span>Span</span>
+                </li>
+            </ol>
+        </div>
+   
+    <div>div grandparent
+        <p>p parent
+            <span>span</span>
+        </p>
+
+    </div>
+</div>
+</body>
+</html>

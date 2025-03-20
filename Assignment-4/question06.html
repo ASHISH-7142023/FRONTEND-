@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $(".progress-bar").css("width","0%");
+                $(".progress").css("display","block");
+                let width = 0;
+                const myInterval = setInterval(function(){
+                    if(width>100){
+                        clearInterval(myInterval);
+                    }else{
+                        width++;
+                        $(".progress-bar").css("width",width+"%");
+                    }
+                },100)
+            })
+        })
+    </script>
+    <style>
+        .progress{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2"> ProgressBar Example</h1>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 30%;  height: 30px;">Loading...</div>
+        </div>
+        <br>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 30%;  height: 30px;">Loading...</div>
+        </div>
+        <br>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" style="width: 30%;  height: 30px;">Loading...</div>
+        </div>
+        <br>
+        <div class="progress" style="height: 30px;">
+            <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 30%;  height: 30px;">Loading</div>
+        </div>
+        <button type="button" class="btn btn-success">Upload File</button>
+        <br><br>
+        <ul class="pagination pagination-md">
+            <li class="page-item" ><a href="question07.html" class="page-link"  target="_blank">Q7</a></li>
+            <li class="page-item active"><a href="question06.html" class="page-link" target="_blank">Q6</a></li>
+            <li class="page-item"><a href="question05.html" class="page-link" target="_blank">Q5</a></li>
+            <li class="page-item"><a href="question04.html" class="page-link" target="_blank">Q4</a></li>
+        </ul>
+    </div>
+</body>
+</html>

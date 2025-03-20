@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery remove() vs empty()</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #container {
+            border: 1px solid black;
+
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </div>
+    <button id="removeButton">Remove</button>
+    <button id="emptyButton">Empty</button>
+
+    <script>
+        $('#removeButton').click(function() {
+            $('#container p:first').remove(); // Removes the first paragraph
+        });
+
+        $('#emptyButton').click(function() {
+
+            $('#container').empty(); // Empties the container
+        });
+    </script>
+</body>
+</html>

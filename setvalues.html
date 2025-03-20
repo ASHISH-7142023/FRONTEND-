@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            alert($("#link").attr("href"));
+            $("#button1").click(function(){
+                $("#one").text("this para has been replaced");
+            });
+            $("#button2").click(function(){
+                $("#two").html("<b><i> this para has been replaced </i></b>");
+            });
+            $("#button3").click(function(){
+                $("#three").val("this para has been replaced");
+            });
+            $("#button4").click(function(){
+                $("#link").attr("href","http://www.amazon.com");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div style="align-content: center; text-align: center;">
+        <h1>Set Contents & Attributes</h1>
+        <a href="https://www.google.co.in/"id="link" target="_blank">CLICK HERE</a>
+        <p id="one">This Is The Original First Paragraph</p>
+        <p id="two">This Is The Original Second Paragraph</p>
+        <input type="text" id="three" value="CSW"><br>
+        <button id="button1">Set New Text</button>
+        <button id="button2">Set New HTML</button>
+        <button id="button3">Set Value</button>
+        <button id="button4">Set Link</button>
+
+    </div>
+    
+</body>
+</html>

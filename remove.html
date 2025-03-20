@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove function</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("#division").remove();//Empty //remove
+            })
+        })
+    </script>
+
+</head>
+<body>
+    <div id="division" style="height: 500px; width: 700px; margin-left: auto; margin-right: auto; background-color: brown; border: 5px solid  darkcyan;">
+        <h1>this is the h1 tag</h1>
+        <p>this is the paragraph</p>
+    </div>
+    <br>
+    <button id="b1">remove</button>
+</body>
+</html>

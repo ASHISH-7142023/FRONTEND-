@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready*(function(){
+            $("#box2").hide();
+            $("button").click(function(){
+                $("#box2").slideToggle(1000,function(){
+                    if($("#box2").is(":visible")){
+                        $("buttton").text("slide up")
+                    }
+                    else{
+                        $("button").text("slide down")
+                    }
+                });
+            })
+        })
+    </script>
+    <style>
+        #box1{
+            height: 400px;
+            width: 400px;
+            background-color: violet;
+            padding:20px;
+        }
+        #box2{
+            height: 6px;
+            width: 12px;
+            background-color: aquamarine;
+            padding: 60px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">first div</div>
+    <div id="box2">second div</div>
+</body>
+</html>

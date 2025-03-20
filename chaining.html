@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>Chaining</title>
+    <script>
+        $(document).ready(function(){
+            alert($("#link").attr("href"));
+            $("#button1").click(function(){
+                alert("TEXT : "+$(".chain").text());
+            });
+            $("#button2").click(function(){
+                alert("HTML : "+$(".chain").html());
+            });
+            $("#button3").click(function(){
+                alert("Inserted Value : "+$("#val1").val());
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>DOM Manipulatiion</h1>
+    <h2 class="chain">This Is H2 Heading <a href="www.google.com "id="link">GOOGLE</a></h2>
+    <br>
+    <input type="text" id="val1">
+    <button id="button1">TEXT Method</button>
+    <button id="button2">HTML Method</button>
+    <button id="button3">Show Value</button>
+
+</body>
+</html>

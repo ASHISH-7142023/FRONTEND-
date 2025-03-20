@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diversing Parents</title>
+    <style>
+        .one *{
+            border: 3px solid darkcyan;
+            color: blue;
+            display: block;
+            margin: 20px;
+            padding: 6px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("span").nextUntil("p").css({"color":"yellow","border":"5px solid green"})  //siblings
+        })
+    </script>
+</head>
+<body class="one">
+    <div>
+        <p>p0</p>
+        <h1>H1 TAG</h1>
+        <span>span</span>
+        <p>p1</p>
+        <h2>h2 tag</h2>
+        <p>p2</p>
+        <h3>h3 tag</h3>
+    </div>
+    
+    
+</body>
+</html>

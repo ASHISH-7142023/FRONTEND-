@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addition Of Elements</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+                $("h1,p").append("<strong>new content </strong>")
+            })
+            $("#b2").click(function(){
+                $("ol").append("<li><strong>new list </strong></li>")
+            })
+        });
+    </script>
+</head>
+<body>
+    <h1>Example of addition of elements</h1>
+    <p>this is the 1st paragraph</p>
+    <ol>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+    </ol>
+    <br><br>
+    <button id="b1">append text into h1 & p</button>
+    <button id="b2">append element in  the list</button>
+    
+</body>
+</html>
